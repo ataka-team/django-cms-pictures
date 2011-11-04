@@ -2,6 +2,17 @@ from setuptools import setup, find_packages
 
 version = "0.0.0"
 
+try:
+    long_description=file('README').read(),
+except Exception:
+    pass
+
+try:
+    license=file('MIT_License.txt').read(),
+except Exception:
+    pass
+
+
 setup(
     name = 'django-cms-pictures',
     version = version,
@@ -33,7 +44,7 @@ setup(
         "Topic :: Internet :: WWW/HTTP :: Dynamic Content",
         "Topic :: Software Development :: Libraries :: Python Modules",
     ],
-    long_description=file('README').read(),
-    license=file('MIT_License.txt').read(),
+    long_description=long_description,
+    license=license,
     keywords = "django cms polaroid slider photos pictures",
 )
