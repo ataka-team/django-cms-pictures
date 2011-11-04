@@ -21,7 +21,7 @@ setup(
     zip_safe=False,
     install_requires=[
         "django-cms>=2.1",
-    ]
+    ],
 
     download_url= 'https://github.com/psaavedra/django-cms-pictures/zipball/master',
     classifiers=[
