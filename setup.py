@@ -22,4 +22,18 @@ setup(
     install_requires=[
         "django-cms>=2.1",
     ]
+
+    download_url= 'https://github.com/psaavedra/django-cms-pictures/zipball/master',
+    classifiers=[
+        "Development Status :: 2 - Pre-Alpha",
+        "Framework :: Django",
+        "License :: OSI Approved :: MIT License",
+        "Operating System :: OS Independent",
+        "Programming Language :: Python",
+        "Topic :: Internet :: WWW/HTTP :: Dynamic Content",
+        "Topic :: Software Development :: Libraries :: Python Modules",
+    ],
+    long_description=file('README').read(),
+    license=file('MIT_License.txt').read(),
+    keywords = "django cms polaroid slider photos pictures",
 )
