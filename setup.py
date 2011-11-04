@@ -2,13 +2,15 @@ from setuptools import setup, find_packages
 
 version = "0.0.0"
 
+long_description = ""
 try:
-    long_description=file('README').read(),
+    long_description=file('README').read()
 except Exception:
     pass
 
+license = ""
 try:
-    license=file('MIT_License.txt').read(),
+    license=file('MIT_License.txt').read()
 except Exception:
     pass
 
