@@ -1,0 +1,24 @@
+{% load sekizai_tags %}
+
+{% addtoblock "css" %}<link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}cms_pictures_polaroid/css/jquery_rotate_plugin.css" media="all" />{% endaddtoblock %}
+
+{% addtoblock "js" %}<script type="text/javascript" src="{{ STATIC_URL }}cms_pictures_polaroid/js/jquery.js"></script>{% endaddtoblock %}
+{% addtoblock "js" %}<script type="text/javascript" src="{{ STATIC_URL }}cms_pictures_polaroid/js/jquery.rotate.min.js"></script>{% endaddtoblock %}
+
+{% addtoblock "js" %}
+<script type="text/javascript">
+//<![CDATA[
+jQuery(document).ready(function ($) {
+
+		$('#plugin_polaroid_{{ polaroid.id }}').rotate({ angle : {{ polaroid.angle }} });
+
+});
+//]]>
+</script>
+{% endaddtoblock %}
+
+<span class="plugin_polaroid{% if polaroid.float %} align-{{ polaroid.float }}{% endif %}">
+{% if link %}<a href="{{ link }}">{% endif %}
+<img id="plugin_polaroid_{{ polaroid.id }}" class="plugin_polaroid_img" src="{{ polaroid.image.url }}" alt="{{ polaroid.alt }}"{% if polaroid.longdesc %} title="{{ polaroid.longdesc }}"{% endif %} />
+{% if link %}</a>{% endif %}
+</span>

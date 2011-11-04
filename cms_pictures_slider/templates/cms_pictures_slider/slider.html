@@ -1,0 +1,29 @@
+{% load sekizai_tags %}
+{% addtoblock "css" %}
+<link rel="stylesheet" href="/static/cms_pictures_slider/css/style.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="/static/cms_pictures_slider/css/nivo-slider.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="/static/cms_pictures_slider/css/default.css" type="text/css" media="screen" />
+{% endaddtoblock %}
+<div class="slider-wrapper theme-default">
+	<div class="ribbon"></div>
+	<div id="slider" class="nivoSlider">
+
+	{% for image in pictures %}
+    		<img src="{{ image.image.url }}" alt="{{ image.alt }}" title="{{ image.longdesc }}" />
+	{% endfor %}
+	</div>
+</div>
+
+{% addtoblock "js" %}
+<script type="text/javascript" src="/static/cms_pictures_slider/js/jquery-1.6.1.min.js"></script>
+<script type="text/javascript" src="/static/cms_pictures_slider/js/jquery.nivo.slider.pack.js"></script>
+<script type="text/javascript">
+//<![CDATA[
+    $(window).load(function() {
+        $('#slider').nivoSlider();
+    });
+//]]>
+</script>
+
+{% endaddtoblock %}
+
