@@ -25,10 +25,16 @@ setup(
     packages = find_packages(),
     package_data={
         'cms_pictures_polaroid': [
-            'templates/cms_pictures_polaroid/*.html',
+            'templates/*/*.html',
+            'static/*/css/*.css',
+            'static/*/images/*',
+            'static/*/js/*.js',
         ],
         'cms_pictures_slider': [
-            'templates/cms_pictures_slider/*.html',
+            'templates/*/*.html',
+            'static/*/css/*.css',
+            'static/*/images/*',
+            'static/*/js/*.js',
         ],
     },
     zip_safe=False,

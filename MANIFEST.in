@@ -1,0 +1,5 @@
+include README
+recursive-include cms_pictures_slider/templates *
+recursive-include cms_pictures_polaroid/templates *
+recursive-include cms_pictures_slider/static *
+recursive-include cms_pictures_polaroid/static *
