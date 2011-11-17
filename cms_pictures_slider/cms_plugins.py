@@ -11,7 +11,7 @@ class CMSSliderPlugin(CMSPluginBase):
     def render(self, context, instance, placeholder):
         context.update({
             'slider':instance.slider,
-            'pictures':SliderPicture.objects.all(),
+            'pictures':SliderPicture.objects.filter(gallery=instance.slider),
             'object':instance,
             'placeholder':placeholder
         })
